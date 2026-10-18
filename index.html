@@ -191,9 +191,7 @@ async function muatBerita() {
     .eq("status", "published")
 
   if (error) {
-    wadah.textContent = "Berita belum dapat dimuat.";
-    console.error(error.message);
-    return;
+    wadah.textContent = "Error: " + error.message;
   }
 
   if (!data || data.length === 0) {
