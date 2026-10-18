@@ -156,5 +156,26 @@
 
 tesKoneksiSupabase(); 
 </script> 
+  
+<p id="status-supabase">Sedang memeriksa koneksi database...</p>
+
+<script>
+  async function tampilkanStatusSupabase() {
+    const status = document.getElementById("status-supabase");
+    const { error } = await supabaseClient
+      .from("news")
+      .select("judul")
+      .limit(1);
+
+    if (error) {
+      status.textContent = "Koneksi database belum berhasil: " + error.message;
+    } else {
+      status.textContent = "Koneksi database berhasil!";
+    }
+  }
+
+  tampilkanStatusSupabase();
+</script>
+
 </body>
 </html>
