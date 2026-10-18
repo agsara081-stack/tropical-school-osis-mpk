@@ -189,7 +189,6 @@ async function muatBerita() {
     .from("news")
     .select("judul, isi")
     .eq("status", "published")
-    .order("created_at", { ascending: false });
 
   if (error) {
     wadah.textContent = "Berita belum dapat dimuat.";
