@@ -188,7 +188,7 @@ async function muatBerita() {
   const { data, error } = await supabaseClient
     .from("news")
     .select("judul, isi")
-    .eq("status", "published")
+    .eq("status", "published");,
 
   if (error) {
     wadah.textContent = "Error: " + error.message;
