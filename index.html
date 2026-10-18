@@ -141,6 +141,20 @@
   );
 
   console.log("Koneksi Supabase siap digunakan.");
-</script>
+  async function tesKoneksiSupabase() {
+  const { data, error } = await supabaseClient
+    .from("news")
+    .select("judul")
+    .limit(1);
+
+  if (error) {
+    console.error("Tes Supabase gagal:", error.message);
+  } else {
+    console.log("Tes Supabase berhasil:", data);
+  }
+}
+
+tesKoneksiSupabase();
+</script> 
 </body>
 </html>
