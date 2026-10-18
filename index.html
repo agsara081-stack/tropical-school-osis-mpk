@@ -184,6 +184,9 @@ tesKoneksiSupabase();
 async function muatBerita() {
   const wadah = document.getElementById("daftar-berita");
   wadah.innerHTML = "<p>Memuat berita...</p>";
+  const wadah = document.getElementById("daftar-berita");
+wadah.innerHTML = "<p>Memuat berita...</p>";
+wadah.innerHTML = "<p>Fungsi berita berjalan...</p>";
 
   const { data, error } = await supabaseClient
     .from("news")
