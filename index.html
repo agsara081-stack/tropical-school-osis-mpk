@@ -191,9 +191,11 @@ async function muatBerita() {
     .eq("status", "published");,
 
   if (error) {
-    wadah.textContent = "Error: " + error.message;
-  }
-
+  wadah.textContent = "Error: " + error.message;
+  console.error(error.message);
+  return;
+}
+    }
   if (!data || data.length === 0) {
     wadah.textContent = "Belum ada berita yang diterbitkan.";
     return;
