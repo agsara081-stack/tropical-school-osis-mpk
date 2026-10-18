@@ -115,5 +115,19 @@
   console.log("Koneksi Supabase siap digunakan.");
 </script>
   
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  const SUPABASE_URL = https://yfngdmjpwdfvsziqzmgg.supabase.co/rest/v1/;
+  const SUPABASE_PUBLISHABLE_KEY = sb_publishable_IJdKwoweAtEBKiz2PauwcQ_cur8RWRO;
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+  console.log("Koneksi Supabase siap digunakan.");
+</script>
+  
 </body>
 </html>
