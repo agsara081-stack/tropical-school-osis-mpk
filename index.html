@@ -191,7 +191,7 @@ async function muatBerita() {
     .eq("status", "published")
 
   if (error) {
-    wadah.textContent = "Error: " + error.message;
+    wadah.textContent = "Error: "error.message;
   }
 
   if (!data || data.length === 0) {
